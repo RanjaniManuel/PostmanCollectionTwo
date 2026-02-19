@@ -2,7 +2,7 @@ name: Postman Collection Two
 
 on:
   push:
-    branches: [main]
+    branches: [master]
   workflow_dispatch: 
   schedule:
     - cron: '30 2 * * *'

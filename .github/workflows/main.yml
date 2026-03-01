@@ -48,6 +48,30 @@ jobs:
            github_token: ${{ secrets.GITHUB_TOKEN }}
            publish_dir: ./newman
            publish_branch: gh-pages
+      
+       - name: Send email
+         if: always()
+         uses: dawidd6/action-send-mail@v11
+         with:
+           server_address: smtp.gmail.com
+           server_port: 465
+           username: ${{ secrets.EMAIL_USERNAME }}
+           password: ${{ secrets.EMAIL.PASSWORD }}
+           subjects: Phoenix Inwaranty Flow Test Execution Notification
+           to: sebastijeyaranjani@gmail.com
+           from: ${{ secrets.EMAIL_USERNAME }}
+           body: |
+                 Hi,
+                 Postman Execution tests have been executed and The Report has been published and the url
+                 https://ranjanimanuel.github.io/PostmanCollectionTwo/
+                 
+           
+           
+           
+           
+         
+        
+
     
       
             

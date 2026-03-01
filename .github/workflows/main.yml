@@ -57,12 +57,12 @@ jobs:
            server_port: 465
            username: ${{ secrets.EMAIL_USERNAME }}
            password: ${{ secrets.EMAIL.PASSWORD }}
-           subjects: Phoenix Inwaranty Flow Test Execution Notification
+           subject: Phoenix Inwaranty Flow Test Execution Notification
            to: sebastijeyaranjani@gmail.com
            from: ${{ secrets.EMAIL_USERNAME }}
            body: |
                  Hi,
-                 Postman Execution tests have been executed and The Report has been published and the url
+                 Postman Execution tests have been executed. And the Report has been published and the url
                  https://ranjanimanuel.github.io/PostmanCollectionTwo/
                  
            
